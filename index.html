@@ -7,7 +7,6 @@
     <body>
         <div>
         <span id="rangeValue">5</span>
-        <span id="labelText"></span>
         <Input class="range" id="userInput" type="range" name "" value="5" min="0" max="10" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
     </div>
         <script type="text/javascript">
@@ -22,7 +21,6 @@
             //inside callback function , it is the best practice while developing widgets
             JFCustomWidget.subscribe("ready", function(){
                 var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
-                document.getElementById('labelText').innerHTML = label;
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {

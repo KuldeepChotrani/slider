@@ -12,9 +12,10 @@
         <script type="text/javascript">
             let widgetValue = "";
              function rangeSlide(value) {
-            document.getElementById('rangeValue').innerHTML = value;
-            widgetValue = value
-            console.log(document.getElementById('rangeValue').innerHTML)
+                document.getElementById('rangeValue').innerHTML = value;
+                widgetValue = value
+                console.log(typeof(document.getElementById('rangeValue').innerHTML))
+                console.log(typeof(widgetValue) + "" + widgetValue )
         }
             //always subscribe to ready event and implement widget related code
             //inside callback function , it is the best practice while developing widgets
@@ -24,10 +25,8 @@
                 //subscribe to form submit event
                 JFCustomWidget.subscribe("submit", function(){
                     var msg = {
-                        //you should valid attribute to data for JotForm
-                        //to be able to use youw widget as required
                         valid: true,
-                        value: document.getElementById('userInput').value
+                        value: widgetValue
                     }
                     console.log(msg)
                     // send value to JotForm

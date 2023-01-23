@@ -12,6 +12,7 @@
     <script type="text/javascript">
         function rangeSlide(value) {
             document.getElementById('rangeValue').innerHTML = value;
+            console.log(document.getElementById('rangeValue').innerHTML)
         }
     </script>
         <script type="text/javascript">
@@ -26,7 +27,7 @@
                         //you should valid attribute to data for JotForm
                         //to be able to use youw widget as required
                         valid: true,
-                        value: document.getElementById('rangeValue').value
+                        value: document.getElementById('rangeValue').innerHTML
                     }
                     // send value to JotForm
                     JFCustomWidget.sendSubmit(msg);

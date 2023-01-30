@@ -28,9 +28,6 @@ noUiSlider.create(phSlider, {
 // The display values can be used to control the slider
 phSlider.noUiSlider.set(1);
 
-var sliderContext = document.getElementById("sliderContext");
-sliderContext.querySelector('.center').textContent = sliderContextMessages.center;
-sliderContext.lastElementChild.textContent = sliderContextMessages.right;
 
 
 JFCustomWidget.subscribe("ready", function(){
@@ -39,6 +36,10 @@ JFCustomWidget.subscribe("ready", function(){
     var sliderContext = document.getElementById("sliderContext");
     var firstText = JFCustomWidget.getWidgetSetting('firstText');
     sliderContext.firstElementChild.textContent = firstText
+    var secondText = JFCustomWidget.getWidgetSetting('secondText');
+    sliderContext.querySelector('.center').textContent = secondText
+    var thirdText = JFCustomWidget.getWidgetSetting('thirdText');
+    sliderContext.lastElementChild.textContent = thirdText
     //subscribe to form submit event
     JFCustomWidget.subscribe("submit", function(){
         var msg = {

@@ -24,10 +24,7 @@
     "url": "https://github.com/KuldeepChotrani/slider/issues"
   },
   "homepage": "https://github.com/KuldeepChotrani/slider#readme",
-  "dependencies": {
-    "ion-rangeslider": "^2.3.1",
-    "jquery": "^3.6.3"
-  },
+
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "browserslist": "^4.21.4",

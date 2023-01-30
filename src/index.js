@@ -1,10 +1,6 @@
+JFCustomWidget.subscribe("ready", function(){
 var phSlider = document.getElementById("phSlider");
-var sliderLength = 10;
-var sliderContextMessages = {
-    left: "not stressed at all",
-    center: "fairly stressed",
-    right: "extremely stressed"
-};
+var sliderLength = JFCustomWidget.getWidgetSetting('Maximum');
 var valuesForSlider = Array.from({ length: sliderLength }, (_, i) => i + 1);
 
 var format = {
@@ -28,9 +24,6 @@ noUiSlider.create(phSlider, {
 // The display values can be used to control the slider
 phSlider.noUiSlider.set(1);
 
-
-
-JFCustomWidget.subscribe("ready", function(){
     var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
     document.getElementById('labelText').innerHTML = label;
     var sliderContext = document.getElementById("sliderContext");

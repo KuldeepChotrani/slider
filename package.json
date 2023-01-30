@@ -1,0 +1,40 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "custom slider for jotform",
+  "source": "src/index.html",
+  "scripts": {
+    "watch": "parcel watch",
+    "start": "parcel src/index.html --open",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuldeepChotrani/slider.git"
+  },
+  "keywords": [
+    "slider",
+    "custom-slider",
+    "jotform-slider"
+  ],
+  "author": "Kuldeep & Elavarasan Muthuvalavan (Lee)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuldeepChotrani/slider/issues"
+  },
+  "homepage": "https://github.com/KuldeepChotrani/slider#readme",
+  "dependencies": {
+    "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.6.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "browserslist": "^4.21.4",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "browserslist": [
+    "defaults and supports es6-module"
+  ]
+}

@@ -1,6 +1,10 @@
 var phSlider = document.getElementById("phSlider");
 var sliderLength = 10;
-
+var sliderContextMessages = {
+    left: "not stressed at all",
+    center: "fairly stressed",
+    right: "extremely stressed"
+};
 var valuesForSlider = Array.from({ length: sliderLength }, (_, i) => i + 1);
 
 var format = {
@@ -25,7 +29,6 @@ noUiSlider.create(phSlider, {
 phSlider.noUiSlider.set(1);
 
 var sliderContext = document.getElementById("sliderContext");
-sliderContext.firstElementChild.textContent = sliderContextMessages.left;
 sliderContext.querySelector('.center').textContent = sliderContextMessages.center;
 sliderContext.lastElementChild.textContent = sliderContextMessages.right;
 
@@ -33,15 +36,9 @@ sliderContext.lastElementChild.textContent = sliderContextMessages.right;
 JFCustomWidget.subscribe("ready", function(){
     var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
     document.getElementById('labelText').innerHTML = label;
-    var sliderContextMessages = {
-        left: JFCustomWidget.getWidgetSetting('firstText'),
-        center: JFCustomWidget.getWidgetSetting('secondText'),
-        right: JFCustomWidget.getWidgetSetting('thirdText')
-    };
     var sliderContext = document.getElementById("sliderContext");
-sliderContext.firstElementChild.textContent = sliderContextMessages.left;
-sliderContext.querySelector('.center').textContent = sliderContextMessages.center;
-sliderContext.lastElementChild.textContent = sliderContextMessages.right;
+    var firstText = JFCustomWidget.getWidgetSetting('firstText');
+    sliderContext.firstElementChild.textContent = firstText
     //subscribe to form submit event
     JFCustomWidget.subscribe("submit", function(){
         var msg = {

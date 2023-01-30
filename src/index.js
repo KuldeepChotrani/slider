@@ -33,7 +33,6 @@ sliderContext.firstElementChild.textContent = sliderContextMessages.left;
 sliderContext.querySelector('.center').textContent = sliderContextMessages.center;
 sliderContext.lastElementChild.textContent = sliderContextMessages.right;
 
-
 JFCustomWidget.subscribe("ready", function(){
     var label = JFCustomWidget.getWidgetSetting('QuestionLabel');
     document.getElementById('labelText').innerHTML = label;

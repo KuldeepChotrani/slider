@@ -1,0 +1,88 @@
+.slider-wrapper {
+    margin: 0 5px;
+    position: relative;
+    margin: 21px 10px;
+}
+
+#phSlider {
+    height: 3px;
+
+    .noUi-connects, .noUi-marker {
+        background: #302e2b;
+    }
+    .noUi-pips-horizontal {
+        padding-top: 0;
+        top: -7.5px;
+        font-size: 24px;
+    }
+    .noUi-value-sub {
+        font-size: 24px;
+    }
+    .noUi-value-horizontal {
+        -webkit-transform: translate(-50%, 100%);
+        transform: translate(-50%, 100%);
+        color: #2d2a26;
+        padding-top: 5px;
+    }
+    .noUi-handle {
+        background-image: url("./images/slider-selector.png");
+        background-position: center;
+        background-size: 42px auto;
+        width: 42px;
+        height: 38px;
+        border: 0;
+        cursor: default;
+        box-shadow: none;
+        top: -19px;
+        right: -21px;
+    }
+    .noUi-handle:after,
+    .noUi-handle:before {
+      display: none;
+    }
+    .noUi-tooltip {
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      left: 50%;
+      bottom: 10%;
+      border: 0;
+      background: none;
+      color: #fbeee4;
+      font-size: 0.85em;
+    }
+    .noUi-marker-horizontal.noUi-marker-large,
+    .noUi-marker-horizontal.noUi-marker-sub {
+      height: 15px;
+    }
+    .noUi-marker-horizontal.noUi-marker-normal {
+      height: 7.5px;
+      margin-top: 3.75px;
+    }
+}
+
+#sliderContext {
+    width: 101%;
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    top: 70px;
+    left: -10px;
+}
+
+#sliderContext > div {
+    flex-grow: 1;
+    width: 33%;
+    height: 100px;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+  
+.right {
+    text-align: right;
+}

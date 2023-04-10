@@ -1,6 +1,7 @@
+$slider-handle-width: 64px;
 .slider-wrapper {
     position: relative;
-    margin: 20px;
+    margin: $slider-handle-width/2;
 }
 
 #phSlider {
@@ -25,42 +26,43 @@
         -webkit-transform: translate(-50%, 100%);
         transform: translate(-50%, 100%);
         color: #2d2a26;
-        padding-top: 5px;
+        padding-top: 8px;
     }
     .noUi-handle {
         background-color: transparent;
         background-image: url("./images/slider-selector.png");
         background-position: center;
-        background-size: 42px auto;
-        width: 42px;
-        height: 38px;
         border: 0;
-        cursor: default;
+        cursor: pointer;
         box-shadow: none;
-        top: -19px;
-        right: -21px;
+
+        width: $slider-handle-width;
+        height: calc($slider-handle-width - 6px);
+        background-size: $slider-handle-width;
+        top: -29px;
+        right: -($slider-handle-width / 2);
     }
     .noUi-handle:after,
     .noUi-handle:before {
-      display: none;
+        display: none;
     }
     .noUi-tooltip {
-      -webkit-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      left: 50%;
-      bottom: 10%;
-      border: 0;
-      background: none;
-      color: #fbeee4;
-      font-size: 0.85em;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        left: 50%;
+        bottom: 10%;
+        border: 0;
+        background: none;
+        color: #fbeee4;
+        font-size: 0.85em;
     }
     .noUi-marker-horizontal.noUi-marker-large,
     .noUi-marker-horizontal.noUi-marker-sub {
-      height: 15px;
+        height: 15px;
     }
     .noUi-marker-horizontal.noUi-marker-normal {
-      height: 7.5px;
-      margin-top: 3.75px;
+        height: 10px;
+        margin-top: 3px;
     }
 }
 
@@ -86,7 +88,7 @@
 .center {
     text-align: center;
 }
-  
+
 .right {
     text-align: right;
 }

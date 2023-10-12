@@ -64,8 +64,9 @@ JFCustomWidget.subscribe("ready", function(){
         }
     };
 
+    let defaultStart = JFCustomWidget.getWidgetSetting('Default');
     noUiSlider.create(phSlider, {
-        start: 5,
+        start: defaultStart,
         range: { min: 0, max: valuesForSlider.length - 1 },
         step: 1,
         tooltips: true,
